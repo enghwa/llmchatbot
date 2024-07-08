@@ -1,10 +1,10 @@
 import React from "react";
-import { Book, Info, Rocket } from "lucide-react";
+// import { Book, Info, Rocket } from "lucide-react";
 
-import CerebriumLogo from "@/assets/logos/cerebrium.png";
-import DailyLogo from "@/assets/logos/daily.png";
-import DeepgramLogo from "@/assets/logos/deepgram.png";
-import L3Logo from "@/assets/logos/llama3.png";
+// import CerebriumLogo from "@/assets/logos/cerebrium.png";
+// import DailyLogo from "@/assets/logos/daily.png";
+// import DeepgramLogo from "@/assets/logos/deepgram.png";
+// import L3Logo from "@/assets/logos/llama3.png";
 
 import { Button } from "./components/ui/button";
 
