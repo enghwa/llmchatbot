@@ -179,7 +179,7 @@ export default function App() {
   return (
     <Card shadow className="animate-appear max-w-lg">
       <CardHeader>
-        <CardTitle>Pipecat {import.meta.env.VITE_APP_TITLE}</CardTitle>
+        <CardTitle>{import.meta.env.VITE_APP_TITLE}</CardTitle>
         <CardDescription>Check configuration below</CardDescription>
       </CardHeader>
       <CardContent stack>

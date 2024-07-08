@@ -44,10 +44,10 @@ const Splash: React.FC<SplashProps> = ({ handleReady }) => {
 
         <div className="max-w-full lg:max-w-2xl flex flex-col gap-6">
           <p className="lg:text-lg text-primary-600">
-            Take what the LLM bot day with a pinch of salt, relax!
+            Take what the LLM bot say with a pinch of salt, relax!
           </p>
           <p className="lg:text-lg text-primary-600">
-            This bot was built with local LLM, TTS all running on Amazon EKS.
+            This bot is powered by local LLM llama3 on VLLM and TTS running on Amazon EKS.
           </p>
         </div>
 
