@@ -17,11 +17,11 @@ const Splash: React.FC<SplashProps> = ({ handleReady }) => {
     <main className="w-full h-full flex items-center justify-center bg-primary-200 p-4 bg-[length:auto_50%] lg:bg-auto bg-colorWash bg-no-repeat bg-right-top">
       <div className="flex flex-col gap-8 lg:gap-12 items-center max-w-full lg:max-w-3xl">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-balance">
-          The World&apos;s Fastest Voice Bot Demo
+          LLM powered Voice Bot Demo
         </h1>
 
-        <div className="flex flex-col gap-2">
-          <span className="text-sm text-primary-400">Brought to you by:</span>
+        {/* <div className="flex flex-col gap-2">
+          <span className="text-sm text-primary-400">Brought to you xby:</span>
           <div className="flex flex-row gap-6 bg-white rounded-full py-4 px-8 items-center">
             <a href="https://www.daily.co/" target="_blank">
               <img src={DailyLogo} alt="Daily.co" className="max-h-[22px]" />
@@ -40,26 +40,22 @@ const Splash: React.FC<SplashProps> = ({ handleReady }) => {
               <img src={L3Logo} alt="Daily.co" className="max-h-[22px]" />
             </a>
           </div>
-        </div>
+        </div> */}
 
         <div className="max-w-full lg:max-w-2xl flex flex-col gap-6">
           <p className="lg:text-lg text-primary-600">
-            Speed is important for voice AI interfaces. Humans expect fast
-            responses in normal conversation. This demo showcases low-latency
-            LLM interaction, aiming to achieve 500ms voice-to-voice response
-            times.
+            Take what the LLM bot day with a pinch of salt, relax!
           </p>
           <p className="lg:text-lg text-primary-600">
-            This bot was built using Pipecat, an open source framework for voice
-            and multimodal conversational AI.
+            This bot was built with local LLM, TTS all running on Amazon EKS.
           </p>
         </div>
 
-        <Button onClick={handleReady}>Try the demo</Button>
+        <Button onClick={handleReady}>Talk to the bot</Button>
 
         <div className="h-[1px] bg-primary-300 w-full" />
 
-        <footer className="flex flex-col lg:flex-row lg:gap-2">
+        {/* <footer className="flex flex-col lg:flex-row lg:gap-2">
           <Button variant="light" asChild>
             <a
               href="https://www.daily.co/blog/the-worlds-fastest-voice-bot/"
@@ -87,7 +83,7 @@ const Splash: React.FC<SplashProps> = ({ handleReady }) => {
               Deploy your own
             </a>
           </Button>
-        </footer>
+        </footer> */}
       </div>
     </main>
   );

@@ -15,14 +15,14 @@ function Header() {
           <Logo className="w-[42px] h-auto aspect-square [&>*:nth-child(5)]:invisible group-hover:[&>*:nth-child(5)]:visible group-hover:[&>*:nth-child(4)]:invisible group-hover:animate-wiggle" />
         </span>
 
-        <nav className="pointer-events-none flex-row items-center gap-8 text-lg leading-7 hidden group-hover:flex group-hover:pointer-events-auto">
+        {/* <nav className="pointer-events-none flex-row items-center gap-8 text-lg leading-7 hidden group-hover:flex group-hover:pointer-events-auto">
           <a href="https://git.new/ai" target="_blank" className={aCx}>
             GitHub
           </a>
           <a href="https://discord.gg/pipecat" target="_blank" className={aCx}>
             Discord
           </a>
-        </nav>
+        </nav> */}
       </div>
       <ExpiryTimer />
     </header>
