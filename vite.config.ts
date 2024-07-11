@@ -17,7 +17,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: 'https://enghwa.github.io/llmchatbot',
+  base: '/',
   plugins: [
     react(),
     webfontDownload(),

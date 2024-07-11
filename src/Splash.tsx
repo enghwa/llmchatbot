@@ -45,6 +45,9 @@ const Splash: React.FC<SplashProps> = ({ handleReady }) => {
         <div className="max-w-full lg:max-w-2xl flex flex-col gap-6">
           <p className="lg:text-lg text-primary-600">
             Take what the LLM bot say with a pinch of salt, relax!
+            You can ask Bobby, the bot any questions, or play a game of trivia, eg: 
+            &quot;Let's play a game of trivia about Japan, you ask the question and I answer!&quot;	
+            It remembers what you said ( LLM + Langchain), so don't be shy to ask him again or summarize the conversation!
           </p>
           <p className="lg:text-lg text-primary-600">
             This bot is powered by local LLM llama3 on VLLM and TTS running on Amazon EKS.
