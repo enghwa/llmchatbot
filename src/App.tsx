@@ -61,6 +61,8 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [startAudioOff, setStartAudioOff] = useState<boolean>(false);
   const [roomUrl, setRoomUrl] = useState<string | null>(roomQs || null);
+  const [botName, setBotName] = useState<string>('Bobby');
+
   const [roomError, setRoomError] = useState<boolean>(
     (roomQs && checkRoomUrl(roomQs)) || false
   );
@@ -85,7 +87,8 @@ export default function App() {
       setState("requesting_agent");
 
       try {
-        data = await fetch_start_agent(roomUrl, serverUrl);
+        // data = await fetch_start_agent(roomUrl, serverUrl);
+        data = await fetch_start_agent(roomUrl, serverUrl, botName);
 
         if (data.error) {
           setError(data.detail);
@@ -143,6 +146,7 @@ export default function App() {
   }
 
   if (state !== "idle") {
+    console.log("aaaa >" + botName)
     return (
       <Card shadow className="animate-appear max-w-lg">
         <CardHeader>
@@ -188,6 +192,7 @@ export default function App() {
           roomQs={roomQs}
           roomQueryStringValid={checkRoomUrl(roomQs)}
           handleCheckRoomUrl={(url) => setRoomUrl(url)}
+          handleBotName={(botName) => setBotName(botName)}
           roomError={roomError}
         />
       </CardContent>

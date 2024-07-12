@@ -3,6 +3,7 @@ import React from "react";
 import { Alert } from "../ui/alert";
 
 import { RoomInput } from "./RoomInput";
+import { BotInput } from "./BotInput";
 import { SettingsList } from "./SettingsList";
 
 interface RoomSetupProps {
@@ -11,6 +12,7 @@ interface RoomSetupProps {
   roomQueryStringValid: boolean;
   roomError: boolean;
   handleCheckRoomUrl: (url: string) => void;
+  handleBotName: (botName: string) => void;
 }
 
 const serverURL = import.meta.env.VITE_SERVER_URL;
@@ -22,6 +24,7 @@ export const RoomSetup: React.FC<RoomSetupProps> = ({
   roomQueryStringValid,
   roomError,
   handleCheckRoomUrl,
+  handleBotName
 }) => {
   return (
     <>
@@ -51,12 +54,15 @@ export const RoomSetup: React.FC<RoomSetupProps> = ({
         roomQueryString={roomQs}
         roomQueryStringValid={roomQueryStringValid}
       />
-
+      <BotInput 
+        onChange={handleBotName}
+        />
       {manualRoomCreation && !roomQs && (
         <RoomInput
           onChange={handleCheckRoomUrl}
           error={roomError && "Please enter valid room URL"}
         />
+        
       )}
     </>
   );
