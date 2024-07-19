@@ -21,8 +21,8 @@ const ExpiryTimer: React.FC = () => {
   useEffect(() => {
     if (noExpiry) return;
 
-    // eht -set 15min
-    const futureTimestamp = Math.floor(Date.now() / 1000) + (5*60)  //room.config.exp;
+    // eht -set 7min
+    const futureTimestamp = Math.floor(Date.now() / 1000) + (7*60)  //room.config.exp;
     
     // Function to update time
     const updateTime = () => {

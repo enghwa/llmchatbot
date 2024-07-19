@@ -146,7 +146,7 @@ export default function App() {
   }
 
   if (state !== "idle") {
-    console.log("aaaa >" + botName)
+    // console.log("aaaa >" + botName)
     return (
       <Card shadow className="animate-appear max-w-lg">
         <CardHeader>
