@@ -17,11 +17,13 @@ const ExpiryTimer: React.FC = () => {
 
   const noExpiry = !room || !room.config.exp || room.config.exp === 0;
 
+
   useEffect(() => {
     if (noExpiry) return;
 
-    const futureTimestamp = room.config.exp;
-
+    // eht -set 7min
+    const futureTimestamp = Math.floor(Date.now() / 1000) + (7*60)  //room.config.exp;
+    
     // Function to update time
     const updateTime = () => {
       const currentTimestamp = Math.floor(Date.now() / 1000);
@@ -44,6 +46,7 @@ const ExpiryTimer: React.FC = () => {
   if (noExpiry) return null;
 
   const isExpired = time.minutes <= 0 && time.seconds <= 0;
+  
 
   return (
     <Tooltip>

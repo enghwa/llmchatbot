@@ -78,6 +78,7 @@ export const SettingsList: React.FC<SettingsList> = ({
           )}
         </span>
       </div>
+      
     </div>
   );
 };
